@@ -2,14 +2,15 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args){
-        int[] data = new int[100];
+        int[] data = new int[1000];
         Random random = new Random();
-        for(int i = 0;i<100;i++){
+        data[0] = 0;
+        for(int i = 1;i<1000;i++){
             data[i] = random.nextInt(100)+1;
         }
-        QuickSort quickSort = new QuickSort(data);
-        quickSort.sort(0,data.length-1);
-        for(int i = 0;i<100;i++){
+        HeapSort heapSort = new HeapSort(data);
+        heapSort.sort();
+        for(int i = 0;i<1000;i++){
             System.out.print(data[i]+ " ");
         }
 
